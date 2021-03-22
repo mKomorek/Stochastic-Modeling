@@ -33,6 +33,7 @@ def calculateBins(normalDistributionSamples):
     return round(
         (normalDistributionSamples.max()-normalDistributionSamples.min()) / binWidth
     )
+
 def plotHistogramWithPDF(normalDistributionSamples):
     bins = calculateBins(normalDistributionSamples)
     fig, ax = plt.subplots()
@@ -45,8 +46,6 @@ def plotHistogramWithPDF(normalDistributionSamples):
     ax.set_xticks(np.arange(-3.5, 3.51, 0.5))
     ax.set_yticks(np.arange(0, 0.6, 0.05))
     plt.grid()
-    plt.ylabel('Probability')
-    plt.xlabel('Data');
     plt.title("Histogram")
     plt.show()
 

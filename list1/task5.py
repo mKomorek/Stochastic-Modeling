@@ -21,9 +21,13 @@ def deterministicTrend(numberOfSamples):
     return np.array(trendSamples)
 
 if __name__ == "__main__":
-    plt.plot(deterministicTrend(200), 'r--')
+    plt.plot(deterministicTrend(200), 'r--', label=f"Deterministic trend")
     for x in range(3):
-        plt.plot(trajectoriesGBM(200))
+        plt.plot(trajectoriesGBM(200), label=f"Trajectory {x+1}")
 
+    plt.ylabel('Value')
+    plt.xlabel('Sample');
+    plt.title("Trajectories of geometric Brown motion")
+    plt.legend(loc='best', frameon=False)
     plt.grid()
     plt.show()
