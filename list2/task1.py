@@ -13,7 +13,7 @@ def SI_model(dt):
     T_plt = np.arange(0, lib.T, dt)
     S, I = init_values(time)
     for x in range(time-1):
-        S[x+1] = S[x] - dt*(lib.beta*I[x]*S[x]/lib.N)
+        S[x+1] = int(S[x] - dt*(lib.beta*I[x]*S[x]/lib.N))
         I[x+1] = I[x] + dt*(lib.beta*I[x]*S[x]/lib.N)
 
     return (T_plt, {'S': S, 'I': I})

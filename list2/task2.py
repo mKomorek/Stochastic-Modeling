@@ -20,7 +20,7 @@ def SI_model_dopri(dt):
         Y[T + 1, :] = ode_system.y
         T_ode[T + 1] = ode_system.t
 
-    return (T_ode, {'S^{DOPRI}': Y[:, 0], 'I^{DOPRI}': Y[:, 1]})
+    return (T_ode, {'S^{DOPRI}': Y[:, 0].astype(int), 'I^{DOPRI}': Y[:, 1]})
 
 def SIS_model_dopri(dt):
     def SIS_ode(t, y):

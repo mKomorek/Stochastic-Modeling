@@ -29,6 +29,12 @@ def apply_chart_properties(title):
     plt.legend(loc='best', frameon=False)
     plt.grid()
 
+def apply_chart_properties_ax(ax, title):
+    ax.set_xlabel(f"Czas[np. dni]")
+    ax.set_ylabel(f"Liczba przypadków (osób)")
+    ax.set_title(title)
+    ax.grid()
+
 def mkdir_p(myPath):
     from errno import EEXIST
     from os import makedirs,path
@@ -45,3 +51,12 @@ def save_file(savePath):
     dirPath = savePath[ : savePath.find('/')]
     mkdir_p(dirPath)
     plt.savefig(savePath, dpi=600)
+
+def save_file_fig(savePath, fig):
+    myPath = os.path.abspath(__file__)
+    dirPath = savePath[ : savePath.find('/')]
+    mkdir_p(dirPath)
+    fig.savefig(savePath, dpi=600)
+
+def loading(t):
+    print(f"[{t}%] Generating on")

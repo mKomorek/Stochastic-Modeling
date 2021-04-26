@@ -39,7 +39,7 @@ def SEIR_comparison_of_euler_and_dopri(dt, logScale, savePath):
     dataSEIR.update(dataSEIRDopri)
     lib.plot_model(T_plt,
         dataSEIR,
-        f"Porównanie modelu SEIR dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}, dt={dt}",
+        f"Porównanie modelu SEIR dla N={lib.N}, $E_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}, dt={dt}",
         logScale,
         savePath)
 
@@ -49,7 +49,7 @@ def SEIRS_comparison_of_euler_and_dopri(dt, logScale, savePath):
     dataSEIRS.update(dataSEIRSDopri)
     lib.plot_model(T_plt,
         dataSEIRS,
-        f"Porównanie modelu SEIRS dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}, dt={dt}",
+        f"Porównanie modelu SEIRS dla N={lib.N}, $E_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}, dt={dt}",
         logScale,
         savePath)
 
