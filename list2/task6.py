@@ -68,21 +68,21 @@ def SEIRS_model():
 
 if __name__ == "__main__":
     lib.plot_model(*SEIR_model(),
-        f"Ewolucja SEIR dla N={lib.N}, $\\beta$={lib.beta}, $\\sigma$={lib.sigma}, $\\eta$={lib.eta}",
+        f"Ewolucja SEIR dla N={lib.N}, $E_0$=1, $\\beta$={lib.beta}, $\\sigma$={lib.sigma}, $\\eta$={lib.eta}",
         False,
         "task6Results/SEIR_model.png")
 
     lib.plot_model(*SEIRS_model(),
-        f"Ewolucja SEIRS dla N={lib.N}, $\\beta$={lib.beta}, $\\sigma$={lib.sigma}, $\\eta$={lib.eta}",
+        f"Ewolucja SEIRS dla N={lib.N}, $E_0$=1, $\\beta$={lib.beta}, $\\sigma$={lib.sigma}, $\\eta$={lib.eta}",
         False,
         "task6Results/SEIRS_model.png")
 
     lib.plot_model(*SEIR_model(),
-        f"Ewolucja SEIR dla N={lib.N}, $\\beta$={lib.beta}, $\\sigma$={lib.sigma}, $\\eta$={lib.eta}",
+        f"Ewolucja SEIR dla N={lib.N}, $E_0$=1, $\\beta$={lib.beta}, $\\sigma$={lib.sigma}, $\\eta$={lib.eta}",
         True,
         "task6Results/SEIR_model_log.png")
 
     lib.plot_model(*SEIRS_model(),
-        f"Ewolucja SEIRS dla N={lib.N}, $$\\beta$={lib.beta}, $\\sigma$={lib.sigma}, $\\eta$={lib.eta}",
+        f"Ewolucja SEIRS dla N={lib.N}, $E_0$=1, $$\\beta$={lib.beta}, $\\sigma$={lib.sigma}, $\\eta$={lib.eta}",
         True,
         "task6Results/SEIRS_model_log.png")

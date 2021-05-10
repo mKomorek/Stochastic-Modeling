@@ -16,7 +16,7 @@ def SI_model(dt):
         S[x+1] = int(S[x] - dt*(lib.beta*I[x]*S[x]/lib.N))
         I[x+1] = I[x] + dt*(lib.beta*I[x]*S[x]/lib.N)
 
-    return (T_plt, {'S': S, 'I': I})
+    return (T_plt, {'S': S.astype(int), 'I': I.astype(int)})
 
 def SIS_model(dt):
     time = int(lib.T/dt)
@@ -26,7 +26,7 @@ def SIS_model(dt):
         S[x+1] = S[x] + dt*(-lib.beta*I[x]*S[x]/lib.N + lib.gamma*I[x])
         I[x+1] = I[x] + dt*(lib.beta*I[x]*S[x]/lib.N - lib.gamma*I[x])
 
-    return (T_plt, {'S': S, 'I': I})
+    return (T_plt, {'S': S.astype(int), 'I': I.astype(int)})
 
 def SIRS_model(dt):
     time = int(lib.T/dt)
@@ -38,7 +38,7 @@ def SIRS_model(dt):
         I[x+1] = I[x] + dt*(lib.beta*I[x]*S[x]/lib.N - lib.gamma*I[x])
         R[x+1] = R[x] + dt*(lib.gamma*I[x] - lib.eta*R[x])
 
-    return (T_plt, {'S': S, 'I': I, 'R': R})
+    return (T_plt, {'S': S.astype(int), 'I': I.astype(int), 'R': R.astype(int)})
 
 if __name__ == "__main__":
     lib.plot_model(*SI_model(1),

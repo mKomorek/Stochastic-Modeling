@@ -24,19 +24,19 @@ def fan_chart_SEIR():
         axR.fill_between(T_plt, SEIRDataDeterministic['R'], SEIRData['R'], color='red', alpha=alpha)
 
     axS.plot(T_plt, SEIRDataDeterministic['S'], '--', color='black')
-    lib.apply_chart_properties_ax(axS, f"Fan chart $S_t$ dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}")
+    lib.apply_chart_properties_ax(axS, f"Fan chart $S_t$ dla N={lib.N}, $E_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}")
     lib.save_file_fig("task8Results/SEIR_model_St.png", figS)
 
     axE.plot(T_plt, SEIRDataDeterministic['E'], '--', color='black')
-    lib.apply_chart_properties_ax(axS, f"Fan chart $E_t$ dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}")
+    lib.apply_chart_properties_ax(axE, f"Fan chart $E_t$ dla N={lib.N}, $E_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}")
     lib.save_file_fig("task8Results/SEIR_model_Et.png", figE)
 
     axI.plot(T_plt, SEIRDataDeterministic['I'], '--', color='black')
-    lib.apply_chart_properties_ax(axI, f"Fan chart $I_t$ dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}")
+    lib.apply_chart_properties_ax(axI, f"Fan chart $I_t$ dla N={lib.N}, $E_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}")
     lib.save_file_fig("task8Results/SEIR_model_It.png", figI)
 
     axR.plot(T_plt, SEIRDataDeterministic['R'], '--', color='black')
-    lib.apply_chart_properties_ax(axR, f"Fan chart $I_t$ dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}")
+    lib.apply_chart_properties_ax(axR, f"Fan chart $R_t$ dla N={lib.N}, $E_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}")
     lib.save_file_fig("task8Results/SEIR_model_Rt.png", figR)
 
 def fan_chart_SEIRS():
@@ -59,19 +59,19 @@ def fan_chart_SEIRS():
         axR.fill_between(T_plt, SEIRSDataDeterministic['R'], SEIRSData['R'], color='red', alpha=alpha)
 
     axS.plot(T_plt, SEIRSDataDeterministic['S'], '--', color='black')
-    lib.apply_chart_properties_ax(axS, f"Fan chart $S_t$ dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}")
+    lib.apply_chart_properties_ax(axS, f"Fan chart $S_t$ dla N={lib.N}, $E_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}")
     lib.save_file_fig("task8Results/SEIRS_model_St.png", figS)
 
     axE.plot(T_plt, SEIRSDataDeterministic['E'], '--', color='black')
-    lib.apply_chart_properties_ax(axS, f"Fan chart $E_t$ dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}")
+    lib.apply_chart_properties_ax(axE, f"Fan chart $E_t$ dla N={lib.N}, $E_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}")
     lib.save_file_fig("task8Results/SEIRS_model_Et.png", figE)
 
     axI.plot(T_plt, SEIRSDataDeterministic['I'], '--', color='black')
-    lib.apply_chart_properties_ax(axI, f"Fan chart $I_t$ dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}")
+    lib.apply_chart_properties_ax(axI, f"Fan chart $I_t$ dla N={lib.N}, $E_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}")
     lib.save_file_fig("task8Results/SEIRS_model_It.png", figI)
 
     axR.plot(T_plt, SEIRSDataDeterministic['R'], '--', color='black')
-    lib.apply_chart_properties_ax(axR, f"Fan chart $I_t$ dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}")
+    lib.apply_chart_properties_ax(axR, f"Fan chart $R_t$ dla N={lib.N}, $E_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}")
     lib.save_file_fig("task8Results/SEIRS_model_Rt.png", figR)
 
 if __name__ == "__main__":

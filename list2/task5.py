@@ -67,27 +67,27 @@ def SIRS_model():
 
 if __name__ == "__main__":
     lib.plot_model(*SI_model(),
-        f"Ewolucja SI dla N={lib.N}, $\\beta$={lib.beta}",
+        f"Ewolucja SI dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}",
         False,
         "task5Results/SI_model.png")
     lib.plot_model(*SIS_model(),
-        f"Ewolucja SIS dla N={lib.N}, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}",
+        f"Ewolucja SIS dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}",
         False,
         "task5Results/SIS_model.png")
     lib.plot_model(*SIRS_model(),
-        f"Ewolucja SIRS dla N={lib.N}, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}",
+        f"Ewolucja SIRS dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}",
         False,
         "task5Results/SIRS_model.png")
 
     lib.plot_model(*SI_model(),
-        f"Ewolucja SI dla N={lib.N}, $\\beta$={lib.beta}",
+        f"Ewolucja SI dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}",
         True,
         "task5Results/SI_model_log.png")
     lib.plot_model(*SIS_model(),
-        f"Ewolucja SIS dla N={lib.N}, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}",
+        f"Ewolucja SIS dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}",
         True,
         "task5Results/SIS_model_log.png")
     lib.plot_model(*SIRS_model(),
-        f"Ewolucja SIRS dla N={lib.N}, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}",
+        f"Ewolucja SIRS dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}",
         True,
         "task5Results/SIRS_model_log.png")

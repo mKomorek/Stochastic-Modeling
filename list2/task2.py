@@ -20,7 +20,7 @@ def SI_model_dopri(dt):
         Y[T + 1, :] = ode_system.y
         T_ode[T + 1] = ode_system.t
 
-    return (T_ode, {'S^{DOPRI}': Y[:, 0].astype(int), 'I^{DOPRI}': Y[:, 1]})
+    return (T_ode, {'S^{DOPRI}': Y[:, 0].astype(int), 'I^{DOPRI}': Y[:, 1].astype(int)})
 
 def SIS_model_dopri(dt):
     def SIS_ode(t, y):
@@ -40,7 +40,7 @@ def SIS_model_dopri(dt):
         Y[T + 1, :] = ode_system.y
         T_ode[T + 1] = ode_system.t
 
-    return (T_ode, {'S^{DOPRI}': Y[:, 0], 'I^{DOPRI}': Y[:, 1]})
+    return (T_ode, {'S^{DOPRI}': Y[:, 0].astype(int), 'I^{DOPRI}': Y[:, 1].astype(int)})
 
 def SIRS_model_dopri(dt):
     def SIRS_ode(t, y):
@@ -61,7 +61,7 @@ def SIRS_model_dopri(dt):
         Y[T + 1, :] = ode_system.y
         T_ode[T + 1] = ode_system.t
 
-    return (T_ode, {'S^{DOPRI}': Y[:, 0], 'I^{DOPRI}': Y[:, 1], 'R^{DOPRI}': Y[:, 2]})
+    return (T_ode, {'S^{DOPRI}': Y[:, 0].astype(int), 'I^{DOPRI}': Y[:, 1].astype(int), 'R^{DOPRI}': Y[:, 2].astype(int)})
 
 if __name__ == "__main__":
     lib.plot_model(*SI_model_dopri(1),

@@ -18,12 +18,12 @@ def fan_chart_SI():
         axI.fill_between(T_plt, SIDataDeterministic['I'], SIData['I'], color='red', alpha=alpha)
 
     axS.plot(T_plt, SIDataDeterministic['S'], '--', color='black')
-    lib.apply_chart_properties(axS, f"Fan chart $S_t$ dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}")
-    lib.save_file("task7Results/SI_model_St.png", figS)
+    lib.apply_chart_properties_ax(axS, f"Fan chart $S_t$ dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}")
+    lib.save_file_fig("task7Results/SI_model_St.png", figS)
 
     axI.plot(T_plt, SIDataDeterministic['I'], '--', color='black')
-    lib.apply_chart_properties(axI, f"Fan chart $I_t$ dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}")
-    lib.save_file("task7Results/SI_model_It.png", figI)
+    lib.apply_chart_properties_ax(axI, f"Fan chart $I_t$ dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}")
+    lib.save_file_fig("task7Results/SI_model_It.png", figI)
 
 def fan_chart_SIS():
     figS = plt.figure()
@@ -39,12 +39,12 @@ def fan_chart_SIS():
         axI.fill_between(T_plt, SISDataDeterministic['I'], SISData['I'], color='red', alpha=alpha)
 
     axS.plot(T_plt, SISDataDeterministic['S'], '--', color='black')
-    lib.apply_chart_properties(axS, f"Fan chart $S_t$ dla N={lib.N}, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}")
-    lib.save_file("task7Results/SIS_model_St.png", figS)
+    lib.apply_chart_properties_ax(axS, f"Fan chart $S_t$ dla N={lib.N}, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}")
+    lib.save_file_fig("task7Results/SIS_model_St.png", figS)
 
     axI.plot(T_plt, SISDataDeterministic['I'], '--', color='black')
-    lib.apply_chart_properties(axI, f"Fan chart $I_t$ dla N={lib.N}, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}")
-    lib.save_file("task7Results/SIS_model_It.png", figI)
+    lib.apply_chart_properties_ax(axI, f"Fan chart $I_t$ dla N={lib.N}, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}")
+    lib.save_file_fig("task7Results/SIS_model_It.png", figI)
 
 def fan_chart_SIRS():
     figS = plt.figure()
@@ -63,16 +63,16 @@ def fan_chart_SIRS():
         axR.fill_between(T_plt, SIRSDataDeterministic['R'], SIRSData['R'], color='red', alpha=alpha)
 
     axS.plot(T_plt, SIRSDataDeterministic['S'], '--', color='black')
-    lib.apply_chart_properties(axS, f"Fan chart $S_t$ dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}")
-    lib.save_file("task7Results/SIRS_model_St.png", figS)
+    lib.apply_chart_properties_ax(axS, f"Fan chart $S_t$ dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}")
+    lib.save_file_fig("task7Results/SIRS_model_St.png", figS)
 
     axI.plot(T_plt, SIRSDataDeterministic['I'], '--', color='black')
-    lib.apply_chart_properties(axI, f"Fan chart $I_t$ dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}")
-    lib.save_file("task7Results/SIRS_model_It.png", figI)
+    lib.apply_chart_properties_ax(axI, f"Fan chart $I_t$ dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}")
+    lib.save_file_fig("task7Results/SIRS_model_It.png", figI)
 
     axR.plot(T_plt, SIRSDataDeterministic['R'], '--', color='black')
-    lib.apply_chart_properties(axR, f"Fan chart $I_t$ dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}")
-    lib.save_file("task7Results/SIRS_model_Rt.png", figR)
+    lib.apply_chart_properties_ax(axR, f"Fan chart $R_t$ dla N={lib.N}, $I_0$=1, $\\beta$={lib.beta}, $\\gamma$={lib.gamma}, $\\eta$={lib.eta}")
+    lib.save_file_fig("task7Results/SIRS_model_Rt.png", figR)
 
 if __name__ == "__main__":
     fan_chart_SI()

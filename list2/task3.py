@@ -21,7 +21,7 @@ def SEIR_model(dt):
         I[x+1] = I[x] + dt*(lib.sigma*E[x] - lib.gamma*I[x])
         R[x+1] = R[x] + dt*(lib.gamma*I[x])
 
-    return (T_plt, {'S': S, 'E':E, 'I': I, 'R': R})
+    return (T_plt, {'S': S.astype(int), 'E':E.astype(int), 'I': I.astype(int), 'R': R.astype(int)})
 
 def SEIRS_model(dt):
     time = int(lib.T/dt)
@@ -33,7 +33,7 @@ def SEIRS_model(dt):
         I[x+1] = I[x] + dt*(lib.sigma*E[x] - lib.gamma*I[x])
         R[x+1] = R[x]+ dt*(lib.gamma*I[x] - lib.eta*R[x])
 
-    return (T_plt, {'S': S, 'E':E, 'I': I, 'R': R})
+    return (T_plt, {'S': S.astype(int), 'E':E.astype(int), 'I': I.astype(int), 'R': R.astype(int)})
 
 def SEIR_dopri_model(dt):
     def SEIR_ode(t, y):
@@ -55,7 +55,10 @@ def SEIR_dopri_model(dt):
         Y[T + 1, :] = ode_system.y
         T_ode[T + 1] = ode_system.t
 
-    return (T_ode, {'S^{DOPRI}': Y[:, 0], 'E^{DOPRI}': Y[:, 1], 'I^{DOPRI}': Y[:, 2], 'R^{DOPRI}': Y[:, 3]})
+    return (T_ode, {'S^{DOPRI}': Y[:, 0].astype(int),
+        'E^{DOPRI}': Y[:, 1].astype(int),
+        'I^{DOPRI}': Y[:, 2].astype(int),
+        'R^{DOPRI}': Y[:, 3].astype(int)})
 
 def SEIRS_dopri_model(dt):
     def SEIRS_ode(t, y):
@@ -77,7 +80,10 @@ def SEIRS_dopri_model(dt):
         Y[T + 1, :] = ode_system.y
         T_ode[T + 1] = ode_system.t
 
-    return (T_ode, {'S^{DOPRI}': Y[:, 0], 'E^{DOPRI}': Y[:, 1], 'I^{DOPRI}': Y[:, 2], 'R^{DOPRI}': Y[:, 3]})
+    return (T_ode, {'S^{DOPRI}': Y[:, 0].astype(int),
+        'E^{DOPRI}': Y[:, 1].astype(int),
+        'I^{DOPRI}': Y[:, 2].astype(int),
+        'R^{DOPRI}': Y[:, 3].astype(int)})
 
 if __name__ == "__main__":
     lib.plot_model(*SEIR_model(1),
